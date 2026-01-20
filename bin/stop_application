@@ -9,7 +9,7 @@ cd "$PROJECT_ROOT/fincode_frontend"
 docker compose -f docker-compose.dev.yml down "$@"
 
 echo "Stopping Fincode Backend (Rails + MySQL + Redis + Mailcatcher)"
-cd "$PROJECT_ROOT/fincode"
+cd "$PROJECT_ROOT/fincode_app"
 docker compose -f docker-compose.yml down "$@"
 
 echo "All services stopped."

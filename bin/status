@@ -5,7 +5,7 @@ set -eu
 PROJECT_ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 
 echo "Backend Services:"
-cd "$PROJECT_ROOT/fincode"
+cd "$PROJECT_ROOT/fincode_app"
 docker compose -f docker-compose.yml ps
 
 echo ""

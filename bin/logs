@@ -6,6 +6,6 @@ PROJECT_ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 
 # Follow logs from all services
 docker compose \
-  -f "$PROJECT_ROOT/fincode/docker-compose.yml" \
+  -f "$PROJECT_ROOT/fincode_app/docker-compose.yml" \
   -f "$PROJECT_ROOT/fincode_frontend/docker-compose.dev.yml" \
   logs -f "$@"
