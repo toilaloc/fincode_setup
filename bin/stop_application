@@ -1,0 +1,15 @@
+#!/bin/bash
+set -eu
+
+# Get the project root directory (parent of fincode_docker)
+PROJECT_ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
+
+echo "Stopping Fincode Frontend (React)"
+cd "$PROJECT_ROOT/fincode_frontend"
+docker compose -f docker-compose.dev.yml down "$@"
+
+echo "Stopping Fincode Backend (Rails + MySQL + Redis + Mailcatcher)"
+cd "$PROJECT_ROOT/fincode"
+docker compose -f docker-compose.yml down "$@"
+
+echo "All services stopped."

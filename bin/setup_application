@@ -1,0 +1,16 @@
+#!/bin/bash
+set -eu
+
+# Get the project root directory (parent of fincode_docker)
+PROJECT_ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
+
+echo "Starting Fincode Backend (Rails + MySQL + Redis + Mailcatcher)"
+cd "$PROJECT_ROOT/fincode"
+rm -f tmp/pids/*
+docker compose -f docker-compose.yml "$@"
+
+echo "Starting Fincode Frontend (React)"
+cd "$PROJECT_ROOT/fincode_frontend"
+docker compose -f docker-compose.dev.yml "$@"
+
+echo "All services started successfully!"
