@@ -102,7 +102,7 @@ FINCODE_SECRET_KEY=s_test_xxxxx
 > You **MUST** update `FINCODE_PUBLIC_KEY` and `FINCODE_SECRET_KEY` with actual API keys from Fincode.
 > 
 > **How to get Fincode API Keys:**
-> 1. Sign up for a Fincode account at [https://www.fincode.jp/](https://www.fincode.jp/)
+> 1. Sign up for a Fincode account at [https://www.fincode.jp/](https://www.fincode.jp/) or [https://dashboard.test.fincode.jp/](https://dashboard.test.fincode.jp/) for development
 > 2. Log in to the Fincode Dashboard
 > 3. Navigate to **Settings** → **API Keys**
 > 4. Copy your **Public Key** (starts with `p_test_` for test mode)
