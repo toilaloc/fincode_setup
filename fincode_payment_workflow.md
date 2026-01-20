@@ -649,6 +649,10 @@ Fincode uses a single API endpoint for both canceling authorizations and refundi
 - Can issue multiple partial refunds
 - Can refund from ¥1 up to remaining amount
 
+#### Official Documentation
+
+For detailed information on refund specifications, settlement timing, and API usage, please refer to the official [Fincode Payment Documentation](https://docs.fincode.jp/payment).
+
 ### Error Codes
 
 #### HTTP Status Codes
@@ -691,6 +695,16 @@ Fincode uses a single API endpoint for both canceling authorizations and refundi
 - **Test Resources**: [https://docs.fincode.jp/develop_support/test_resources](https://docs.fincode.jp/develop_support/test_resources)
 - **Error Codes**: [https://docs.fincode.jp/develop_support/error](https://docs.fincode.jp/develop_support/error)
 - **Payment Notes**: [https://docs.fincode.jp/payment/note](https://docs.fincode.jp/payment/note)
+
+---
+
+## Support
+
+For any technical issues or inquiries, please contact Fincode support directly:
+
+- **Contact Form**: [https://form.fincode.jp/contact](https://form.fincode.jp/contact)
+
+> **Note**: Support usage typically receives a response within **1 to 6 hours** (during business hours) after the request is received.
 
 ---
 

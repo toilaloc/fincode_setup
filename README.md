@@ -97,7 +97,7 @@ FINCODE_PUBLIC_KEY=p_test_xxxxx
 FINCODE_SECRET_KEY=s_test_xxxxx
 ```
 
-> **⚠️ Important - Fincode API Keys**: 
+> ** Important - Fincode API Keys**: 
 > 
 > You **MUST** update `FINCODE_PUBLIC_KEY` and `FINCODE_SECRET_KEY` with actual API keys from Fincode.
 > 
