@@ -54,6 +54,25 @@ Holder: TARO YAMADA
 
 ## Overview
 
+### What is Fincode?
+
+Fincode is an online payment gateway service developed by GMO, acting as a "virtual cash register" that connects:
+
+- **Merchant**: Provider of products/services
+- **Payment Provider**: Card companies, banks
+- **Customer**: Buyer
+
+### Integration Methods
+
+Fincode provides 4 integration methods:
+
+| Method | Description | Pros | Use Case |
+|--------|-------------|------|----------|
+| **Token Type** | Tokenize card info on client | Highest customization, full UX control | Custom payment flows |
+| **Redirect Type** | Redirect to Fincode payment page | Reduced development effort | Quick setup, low resources |
+| **Web UI Component** | Use available UI components | Balance between customization and speed | Flexible design needs |
+| **Mobile SDK** | SDK for iOS/Android/React Native | Native mobile support | Mobile applications |
+
 ### Design Goals
 
 - **Streamlined Purchase**: Direct purchases from product detail pages
@@ -150,7 +169,7 @@ sequenceDiagram
     Note over Admin: Admin Panel - Refund Request
     Admin->>BE: POST /payments/:id/refund {amount, reason}
     BE->>BE: Validate payment & amount
-    BE->>FC: PUT /v1/payments/:id/refund
+    BE->>FC: PUT /v1/payments/:id/cancel
     FC-->>BE: Success (Refunded)
     BE->>BE: Create Refund Record & Update Payment
     BE-->>Admin: {success: true, refund_id}
