@@ -36,12 +36,8 @@ git --version
 This setup requires three repositories in the same parent directory:
 
 ```bash
-# Create parent directory
-mkdir fincode_project
-cd fincode_project
-
 # Clone backend repository
-git clone <backend-repo-url> fincode
+git clone <backend-repo-url> fincode_app
 
 # Clone frontend repository
 git clone <frontend-repo-url> fincode_frontend
@@ -52,8 +48,8 @@ git clone <docker-repo-url> fincode_setup
 
 Expected directory structure:
 ```
-fincode_project/
-├── fincode/                  # Backend Rails application
+.
+├── fincode_app/              # Backend Rails application
 ├── fincode_frontend/         # Frontend React application
 └── fincode_setup/            # Docker orchestration scripts
     └── bin/
@@ -72,7 +68,7 @@ fincode_project/
 Navigate to the backend directory and create `.env` file:
 
 ```bash
-cd fincode
+cd fincode_app
 cp .env.example .env
 ```
 
@@ -390,7 +386,7 @@ bin/status
 
 # Wait a few more seconds for MySQL to fully start
 # Then restart the Rails container
-cd ../fincode
+cd ../fincode_app
 docker compose restart rails
 ```
 
@@ -426,7 +422,7 @@ bin/status
 bin/logs mailcatcher
 
 # Restart Mailcatcher
-cd ../fincode
+cd ../fincode_app
 docker compose restart mailcatcher
 
 # Check Rails mailer configuration
@@ -603,8 +599,8 @@ docker exec -it fincode_redis redis-cli -a redis_password ping
 ## Project Structure
 
 ```
-fincode_project/
-├── fincode/                    # Backend Rails application
+.
+├── fincode_app/                # Backend Rails application
 │   ├── app/                    # Rails application code
 │   │   ├── controllers/        # Controllers
 │   │   ├── models/            # Models
@@ -670,13 +666,12 @@ fincode_project/
 
 ```bash
 # 1. Clone repositories
-mkdir fincode_project && cd fincode_project
-git clone <backend-repo> fincode
+git clone <backend-repo> fincode_app
 git clone <frontend-repo> fincode_frontend
 git clone <docker-repo> fincode_setup
 
 # 2. Configure environment
-cd fincode
+cd fincode_app
 cp .env.example .env
 # Edit .env and add Fincode API keys
 
