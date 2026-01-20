@@ -5,7 +5,7 @@ set -eu
 PROJECT_ROOT="$(cd "$(dirname "$0")/../.." && pwd)"
 
 echo "Starting Fincode Backend (Rails + MySQL + Redis + Mailcatcher)"
-cd "$PROJECT_ROOT/fincode"
+cd "$PROJECT_ROOT/fincode_app"
 rm -f tmp/pids/*
 docker compose -f docker-compose.yml "$@"
 
